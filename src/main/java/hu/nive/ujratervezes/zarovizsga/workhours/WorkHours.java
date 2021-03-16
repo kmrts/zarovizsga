@@ -32,7 +32,7 @@ Egy napra, egy alkalmazotthoz mindig csak egy sor van.
                 dataList.add(new DailyData(parts[0], Integer.parseInt(parts[1]), parts[2]));
 
             }
-            result = getString(result, dataList);
+            result = getMinHourString(result, dataList);
 
         } catch (IOException ioe) {
             throw new IllegalStateException("Can not read file", ioe);
@@ -40,7 +40,7 @@ Egy napra, egy alkalmazotthoz mindig csak egy sor van.
         return result;
     }
 
-    private String getString(String result, List<DailyData> dataList) {
+    private String getMinHourString(String result, List<DailyData> dataList) {
         int min= dataList.get(0).getHours();
         for(DailyData dd: dataList){
             if(dd.getHours()< min){
