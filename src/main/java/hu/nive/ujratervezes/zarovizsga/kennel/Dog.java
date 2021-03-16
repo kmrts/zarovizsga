@@ -8,8 +8,8 @@ public abstract class Dog {
     A happiness értéke 0 legyen! Legyenek az attribútumokhoz getterek!
     Legyen egy void feed() és egy void play(int hours) metódusa is, de ezek ne legyenek implementálva.
      */
-    private String name;
-    public int happiness;
+    String name;
+    int happiness;
 
     public Dog(String name) {
         this.name = name;
